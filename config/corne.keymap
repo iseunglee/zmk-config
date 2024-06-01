@@ -3,10 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-#include "zmk-helpers/helper.h"
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
-
+#include "../zmk-helpers/helper.h"
 
 #define DEF 0
 #define NAV 1
