@@ -118,6 +118,56 @@
             tapping-term-ms = <200>;
             bindings = <&kp N8>, <&kp ASTRK>;
         };
+
+        hmtpl: hmtpl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMTPL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <36 37 38 39 40 41 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+        };
+
+        hmtpr: hmtpr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMTPR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <36 37 38 39 40 41 0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 3>;
+        };
+
+        shifthmr: shifthmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTHMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
+            quick-tap-ms = <185>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <36 37 38 39 40 41 0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 3>;
+        };
+
+        shifthml: shifthml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTHML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
+            quick-tap-ms = <185>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <36 37 38 39 40 41 36 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+        };
     };
 
     keymap {
@@ -131,10 +181,10 @@
             //                    | GUI | LWR | SPC |   | ENT | BKSP | RSE |
 
             bindings = <
-&kp ESC    &kp Q        &kp W        &kp E         &kp R          &kp T        &kp Y    &kp U          &kp I         &kp O        &kp P                &kp TAB
-&kp LCTRL  &hml LCMD A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G        &kp H    &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V          &kp B        &kp N    &kp M          &kp COMMA     &kp DOT      &kp FSLH             &kp LALT
-                                     &kp LGUI      &mo 1          &kp SPACE    &kp RET  &kp BSPC       &mo 2
+&kp ESC    &kp Q              &kp W              &kp E           &kp R              &kp T        &kp Y    &kp U                    &kp I           &kp O               &kp P                       &kp TAB
+&kp LCTRL  &hmtpl LEFT_GUI A  &hmtpl LEFT_ALT S  &hmtpl RCTRL D  &shifthml LSHFT F  &kp G        &kp H    &shifthmr RIGHT_SHIFT J  &hmtpr RCTRL K  &hmtpr RIGHT_ALT L  &hmtpr RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z              &kp X              &kp C           &kp V              &kp B        &kp N    &kp M                    &kp COMMA       &kp DOT             &kp FSLH                    &kp LALT
+                                                 &kp LGUI        &mo 1              &kp SPACE    &kp RET  &kp BSPC                 &mo 2
             >;
         };
 
