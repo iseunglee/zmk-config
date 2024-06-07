@@ -186,10 +186,10 @@
             //                    | GUI | LWR | SPC |   | ENT | BKSP | RSE |
 
             bindings = <
-&kp ESC    &kp Q              &kp W              &kp E           &kp R              &kp T        &kp Y    &kp U                    &kp I           &kp O               &kp P                       &kp TAB
-&kp LCTRL  &hmtpl LEFT_GUI A  &hmtpl LEFT_ALT S  &hmtpl RCTRL D  &shifthml LSHFT F  &kp G        &kp H    &shifthmr RIGHT_SHIFT J  &hmtpr RCTRL K  &hmtpr RIGHT_ALT L  &hmtpr RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z              &kp X              &kp C           &kp V              &kp B        &kp N    &kp M                    &kp COMMA       &kp DOT             &kp FSLH                    &kp LALT
-                                                 &kp LGUI        &mo 1              &kp SPACE    &kp RET  &kp BSPC                 &mo 2
+&kp ESC    &kp Q              &kp W              &kp E           &kp R           &kp T        &kp Y    &kp U                 &kp I           &kp O               &kp P                       &kp TAB
+&kp LCTRL  &hmtpl LEFT_GUI A  &hmtpl LEFT_ALT S  &hmtpl RCTRL D  &hmtpl LSHFT F  &kp G        &kp H    &hmtpr RIGHT_SHIFT J  &hmtpr RCTRL K  &hmtpr RIGHT_ALT L  &hmtpr RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z              &kp X              &kp C           &kp V           &kp B        &kp N    &kp M                 &kp COMMA       &kp DOT             &kp FSLH                    &kp LALT
+                                                 &kp LGUI        &mo 1           &kp SPACE    &kp RET  &kp BSPC              &mo 2
             >;
         };
 
