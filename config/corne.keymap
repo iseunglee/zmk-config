@@ -31,11 +31,6 @@
             key-positions = <20 21>;
         };
 
-        steno {
-            bindings = <&tog 3>;
-            key-positions = <37 36 40 41>;
-        };
-
         en-kr-create {
             bindings = <&kp LC(SPACE)>;
             key-positions = <15 38>;
